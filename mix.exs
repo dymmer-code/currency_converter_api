@@ -5,6 +5,10 @@ defmodule CurrencyConverterApi.MixProject do
     [
       app: :currency_converter_api,
       version: "0.1.0",
+      name: "CurrencyConverterApi",
+      description: "Currency Converter API",
+      package: package(),
+      source_url: "https://github.com/altenwald/currency_converter_api",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
@@ -29,6 +33,15 @@ defmodule CurrencyConverterApi.MixProject do
       {:nebulex, "~> 1.0.0-rc.3"},
 
       {:excoveralls, "~> 0.10.3", only: :test},
+    ]
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "mix.lock", "README*", "COPYING*"],
+      maintainers: ["Manuel Rubio"],
+      licenses: ["LGPL 2.1"],
+      links: %{"GitHub" => "https://github.com/altenwald/currency_converter_api"},
     ]
   end
 
