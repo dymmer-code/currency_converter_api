@@ -4,7 +4,7 @@ defmodule CurrencyConverterApi.MixProject do
   def project do
     [
       app: :currency_converter_api,
-      version: "0.1.0",
+      version: "0.1.0-rc",
       name: "CurrencyConverterApi",
       description: "Currency Converter API",
       package: package(),
@@ -33,6 +33,7 @@ defmodule CurrencyConverterApi.MixProject do
       {:nebulex, "~> 1.0.0-rc.3"},
 
       {:excoveralls, "~> 0.10.3", only: :test},
+      {:ex_doc, "~> 0.19.0", only: :dev},
     ]
   end
 
