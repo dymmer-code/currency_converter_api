@@ -4,7 +4,7 @@ defmodule CurrencyConverterApi.MixProject do
   def project do
     [
       app: :currency_converter_api,
-      version: "0.1.0-rc",
+      version: "0.1.0-rc.1",
       name: "CurrencyConverterApi",
       description: "Currency Converter API",
       package: package(),

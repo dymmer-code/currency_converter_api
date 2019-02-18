@@ -9,18 +9,18 @@ defmodule CurrencyConverterApi do
 
   @ttl 3600
 
-  def convert(from, to) do
+  def convert(from, to, apiKey) do
     case Cache.get({:convert, from, to}) do
       nil ->
-        data = convert_call(from, to)
+        data = convert_call(from, to, apiKey)
         Cache.set({:convert, from, to}, data, on_conflict: :replace, ttl: @ttl)
       data ->
         data
     end
   end
 
-  def convert_call(from, to) do
-    case get("/api/v6/convert", query: [q: "#{from}_#{to}", compact: "y"]) do
+  def convert_call(from, to, apiKey) do
+    case get("/api/v6/convert", query: [q: "#{from}_#{to}", compact: "y", apiKey: apiKey]) do
       {:ok, resp} ->
         Logger.debug "resp (ok) => #{inspect resp.body}"
         resp.body["#{from}_#{to}"]["val"]
