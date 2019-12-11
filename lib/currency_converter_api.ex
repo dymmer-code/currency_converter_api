@@ -3,7 +3,7 @@ defmodule CurrencyConverterApi do
   require Logger
   alias CurrencyConverterApi.Cache
 
-  plug Tesla.Middleware.BaseUrl, "https://free.currencyconverterapi.com"
+  plug Tesla.Middleware.BaseUrl, "https://free.currconv.com"
   plug Tesla.Middleware.Headers, [{"content-type", "application/json"}]
   plug Tesla.Middleware.JSON
 
