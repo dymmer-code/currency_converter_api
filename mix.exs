@@ -28,7 +28,7 @@ defmodule CurrencyConverterApi.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, ">= 1.0.0"},
+      {:jason, "~> 1.0"},
       {:tesla, "~> 1.1.0"},
       {:nebulex, "~> 1.0.1"},
 
