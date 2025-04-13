@@ -1,3 +1,6 @@
+> [!WARNING]
+> Well, there's a day where everything free is not free anymore or it's closed. The free side of this service was shutdown time ago and looks like it's not going back. If you are able to pay for getting the service it's up to you. But since I don't use it I see non sense to keep maintaining this library so, you are on your own, I wish you the best of luck!
+
 # CurrencyConvertApi
 
 Implementation for the API available in this site: https://free.currencyconverterapi.com
